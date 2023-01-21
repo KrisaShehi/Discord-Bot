@@ -27,11 +27,7 @@ client.on("messageCreate", (message) => {
 
     axios(config)
       .then((response) => {
-        console.log(JSON.stringify(response.data));
-        if (response.data) {
           message.reply(JSON.stringify(response.data));
-        } else {
-        }
       })
       .catch((error) => {
         message.reply("No short answer available");
